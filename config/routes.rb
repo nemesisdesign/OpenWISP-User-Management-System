@@ -16,6 +16,7 @@
 # along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 Owums::Application.routes.draw do
+  
   #### Named Routes --->
   match '/account/login' => 'account_sessions#new', :as => :account_login
   match '/account/logout' => 'account_sessions#destroy', :as => :account_logout, :via => 'delete'
@@ -73,6 +74,15 @@ Owums::Application.routes.draw do
   resources :stats, :only => [:index, :show] do
     post :export, :on => :collection
   end
+  ###################
+  
+  #### Opro Oauth provider
+  resources :oauth_client_applications, :controller => 'oauth/client_app', :path => 'oauth/clients'
+  resources :oauth_docs,                :controller => 'oauth/docs', :path => 'oauth/docs'
+  match '/oauth/new'           => 'oauth/auth#new',          :as => 'oauth_new'
+  match '/oauth/authorize'    => 'oauth/auth#authorize',    :as => 'oauth_authorize'
+  match '/oauth/access_token' => 'oauth/auth#access_token', :as => 'oauth_token'
+  match '/oauth/account_details' => 'oauth/auth#account_details', :as => 'account_details'
   ###################
 
   #### Root Route --->

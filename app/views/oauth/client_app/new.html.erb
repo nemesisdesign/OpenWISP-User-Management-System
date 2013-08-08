@@ -1,0 +1,20 @@
+<div class="grid_12">
+  <div class="box articles">
+    <div class="block" id="articles">
+            
+      <h2>Create An OAuth Client App</h2>
+      <div>
+        <%= form_for @client_app do |f| %>
+          <%= f.label :name %>
+          <%= f.text_field :name, :placeholder => 'App Name' %>
+          <%= f.submit 'Create OAuth Client', :id => 'submitApp', :class => 'button submit' %>
+        <%- end -%>
+      </div>
+      
+      <p>
+        <%= link_to 'My Aplications', oauth_client_applications_path %>
+      </p>
+      
+    </div>
+  </div>
+</div>

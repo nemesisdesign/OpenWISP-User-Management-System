@@ -32,6 +32,9 @@ gem 'savon', '~> 1.2.0'
 gem 'activemerchant'
 gem 'prawn'
 
+# oauth
+gem 'opro'
+
 group :test do
   gem 'sqlite3'
 end

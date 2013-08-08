@@ -1,0 +1,25 @@
+<div class="grid_12">
+  <div class="box articles">
+    <div class="block" id="articles">
+
+      <h2>Success! Here is your OAuth Client's Credentials</h2>
+      <p>Copy these credentials down for use in your application</p>
+      <table>
+        <tr><td><strong>Name:</strong></td><td><%= @client_app.name %></td></tr>
+        <tr><td><strong>Client Id:</strong></td><td><%= @client_app.app_id     %></td></tr>
+        <tr><td><strong>Secret:</strong></td><td><%= @client_app.app_secret %></td></tr>
+      </table>
+      
+      <p style="text-align:center">&laquo; <%= link_to 'Back to My Aplications', oauth_client_applications_path %></p>
+      
+      <hr />
+      <p>
+        Read the
+        <%= link_to 'Quick Start Documentation', oauth_doc_path(:quick_start) %> or
+        <%= link_to 'Register Another Oauth Client App', new_oauth_client_application_path %>
+      </p>
+
+    </div>
+  </div>
+</div>
+

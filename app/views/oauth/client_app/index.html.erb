@@ -1,0 +1,37 @@
+<div class="grid_12">
+  <div class="box articles">
+    <div class="block" id="articles">
+
+      <%- if @client_apps.blank? -%>
+        <h2>You have no Apps</h2>
+      <%- else -%>
+        <h2>Your Apps</h2>
+        
+        <table>
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>Id</th>
+              <th>Secret</th>
+              <th>Actions</th>
+            </tr>
+          </thead>
+          <tbody>
+          <% @client_apps.each do |client_app| %>
+            <tr class="<%= cycle('odd', 'even') %>">
+              <td><%= client_app.name %></td>
+              <td><%= client_app.app_id %></td>
+              <td><%= client_app.app_secret %></td>
+              <td><%= link_to t(:Destroy), client_app, :confirm => t(:Are_you_sure), :method => :delete %></td>
+            </tr>
+          <%- end -%>
+          </tbody>
+        </table>
+      <%- end -%>
+      
+      <%= link_to 'Register an New App', new_oauth_client_application_path, :class => 'button' %>
+      
+      <p><%= link_to 'Quick Start Documentation', oauth_doc_path(:quick_start) %> </p>
+    </div>
+  </div>
+</div>

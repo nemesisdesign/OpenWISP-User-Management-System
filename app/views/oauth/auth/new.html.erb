@@ -1,0 +1,31 @@
+<div class="grid_12">
+  <div class="box articles">
+    <div class="block" id="articles">
+
+      <h2><%= t :Authorization_Request %></h2>
+      
+      <p>
+      The application <strong>"<%= @client_app.name %>"</strong> would like to access your data (name, username and email).
+      Only accept if you trust this application, you will then be redirected back to: "<%= @redirect_uri %>".
+      </p>
+      
+      <%= form_for @client_app, :url => oauth_authorize_path(:client_id => @client_app.client_id, :redirect_uri => @redirect_uri), :method => :post do |f| %>
+      
+        <p>I Authorize <%= @client_app.name %> to:</p>
+        
+        <ul>
+          <li><%= check_box_tag 'permissions[read]', 1, true, {:disabled => true} %> Read my username, full name and email</li>
+      
+          <% @scopes.each do |permission| %>
+            <% is_checked =  @client_app.permissions.key?(permission) ? @client_app.permissions[permission] : true %>
+            <li><%= check_box_tag "permissions[#{permission}]", 1, is_checked %> <%= permission.capitalize %></li>
+          <% end %>
+        </ul>
+      
+        <%= f.submit 'Authorize This Application', :id => 'oauthAuthorize', :class => 'button left' %>
+        <%= button_to 'Decline this Request', request.referrer, :id => 'oauthNoAuthorize', :class => 'button left' %>
+      <%- end -%>
+
+    </div>
+  </div>
+</div>
