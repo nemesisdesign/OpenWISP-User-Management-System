@@ -20,13 +20,14 @@
 <div class="grid_6 prefix_3 suffix_3">
   <div class="box">
     <div class="block" id="login">
+      <%= session[:return_to] %>
       <%= simple_form_for @account_session, :url => account_session_path do |f| %>
           <fieldset>
             <legend><%=t :Login %></legend>
             <p><%= f.error_messages %></p>
 
             <% if Configuration.get('use_mobile_phone_as_username') == "true" %>
-                <%= f.input :username, :label => t(:Username_or_mobile_or_email) %>
+                <%= f.input :username, :label => t(:Username_or_mobile) %>
             <% else %>
                 <%= f.input :username %>
             <% end %>

@@ -40,8 +40,8 @@ class AccountSessionsController < ApplicationController
       end
 
       respond_to do |format|
-        format.html { redirect_to account_url }
-        format.mobile { redirect_to account_url }
+        format.html { redirect_back_or_default(account_url) }
+        format.mobile { redirect_back_or_default(account_url) }
         format.xml { render_if_xml_restful_enabled :nothing => true, :status => :created }
       end
     else

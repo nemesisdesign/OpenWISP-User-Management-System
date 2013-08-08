@@ -33,7 +33,7 @@ class OperatorSessionsController < ApplicationController
       end
       
       flash[:notice] = I18n.t(:Login_successful)
-      redirect_to operator_url(@operator_session.record)
+      redirect_back_or_default operator_url(@operator_session.record)
     else
       render :action => :new
     end

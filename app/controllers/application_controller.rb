@@ -35,7 +35,6 @@ class ApplicationController < ActionController::Base
   # Additional gem/plugin functionality
   has_mobile_fu
 
-
   def toggle_mobile
     session[:mobile_view] = !session[:mobile_view]
     redirect_to current_account ? account_path : root_path
@@ -60,6 +59,24 @@ class ApplicationController < ActionController::Base
       render params
     else
       render :xml => { :error => 'disabled' }, :status => :unauthorized
+    end
+  end
+  
+  def require_account
+    unless current_account
+      store_location
+      flash[:notice] = I18n.t(:Must_be_logged_in)
+      redirect_to new_account_session_url
+      false
+    end
+  end
+
+  def require_no_account
+    if current_account
+      store_location
+      flash[:notice] = I18n.t(:Must_be_logged_out)
+      redirect_to account_url
+      false
     end
   end
 
@@ -97,22 +114,18 @@ class ApplicationController < ActionController::Base
     return @current_account if defined?(@current_account)
     @current_account = current_account_session && current_account_session.record
   end
-
-  def require_account
-    unless current_account
-      store_location
-      flash[:notice] = I18n.t(:Must_be_logged_in)
-      redirect_to new_account_session_url
-      false
-    end
-  end
-
-  def require_no_account
-    if current_account
-      store_location
-      flash[:notice] = I18n.t(:Must_be_logged_out)
-      redirect_to account_url
-      false
+  
+  def current_user
+    return @current_user if defined?(@current_user)
+    if @current_account
+      @current_user = User.find(@current_account.id)
+    else
+      @current_account = current_account_session && current_account_session.record
+      unless @current_account.nil
+        @current_user = User.find(@current_account.id)
+      else
+        @current_user = @current_account
+      end
     end
   end
 
@@ -160,12 +173,12 @@ class ApplicationController < ActionController::Base
   end
 
   def store_location
-    session[:return_to] = request.fullpath
+    cookies[:return_to] = request.fullpath
   end
 
   def redirect_back_or_default(default)
-    redirect_to(session[:return_to] || default)
-    session[:return_to] = nil
+    redirect_to(cookies[:return_to] || default)
+    cookies[:return_to] = nil
   end
 
   # Access current_operator from models
