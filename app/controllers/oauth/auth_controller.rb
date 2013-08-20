@@ -24,7 +24,7 @@ class Oauth::AuthController < ApplicationController
     end
   end
 
-  def access_token
+  def access_token    
     if params[:code].nil?
       render :json => {:error => "Missing code param"}, :status => 400
       return
@@ -45,7 +45,12 @@ class Oauth::AuthController < ApplicationController
     end
 
     access_grant.start_expiry_period!
-    render :json => {:access_token => access_grant.access_token, :refresh_token => access_grant.refresh_token, :expires_in => access_grant.access_token_expires_at}
+    render :json => {
+      :id => access_grant.user_id,
+      :access_token => access_grant.access_token,
+      :refresh_token => access_grant.refresh_token,
+      :expires_in => access_grant.access_token_expires_at
+    }
   end
 
   # When a user is sent to authorize an application they must first accept the authorization
@@ -86,6 +91,7 @@ class Oauth::AuthController < ApplicationController
   
   def account_details
     account_details = {
+      :id => current_account.id,
       :username => current_account.username,
       :email => current_account.email,
       :first_name => current_account.given_name,
@@ -113,6 +119,9 @@ class Oauth::AuthController < ApplicationController
   end
 
   def allow_oauth
+    if oauth_access_grant.nil?
+      render :json => { 'error' => 'invalid access token' }, :status => 400
+    end
     @use_oauth = true
   end
 
@@ -133,11 +142,6 @@ class Oauth::AuthController < ApplicationController
   end
 
   def oauth_auth!
-    if not valid_oauth?
-      render :json => { 'error' => 'supplied token is not valid' }, :status => 403
-      return
-    end
-    
     ::Opro.login(self, oauth_user)  if valid_oauth?
     yield
     ::Opro.logout(self, oauth_user) if valid_oauth?
