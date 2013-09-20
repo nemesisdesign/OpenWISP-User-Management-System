@@ -33,7 +33,7 @@
 <% end %>
 
 <div id="registration-second-step"<% if account_verification_methods.length > 1 and account.new_record? %> class="hidden"<% end %>>
-    <%= render 'common/form_elements/mobile_phone', :form => f, :owner => account, :prefixes => mobile_prefixes %>
+    <%= render 'common/form_elements/mobile_phone', :form => f, :owner => account, :prefixes => mobile_prefixes_select(mobile_prefixes) %>
     
     <%= render 'common/form_elements/identity_document', :form => f, :owner => account %>
     

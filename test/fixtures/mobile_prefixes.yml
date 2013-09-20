@@ -1,144 +1,1199 @@
-1:
-  prefix: 320
-  international_prefix: 
-  disabled: f
-2:
-  prefix: 323
-  international_prefix: 
-  disabled: f
-3:
-  prefix: 327
-  international_prefix: 
-  disabled: f
-4:
-  prefix: 328
-  international_prefix: 
-  disabled: f
-5:
-  prefix: 329
-  international_prefix: 
-  disabled: f
-6:
-  prefix: 330
-  international_prefix: 
-  disabled: f
-7:
-  prefix: 331
-  international_prefix: 
-  disabled: f
-8:
-  prefix: 333
-  international_prefix: 
-  disabled: f
-9:
-  prefix: 334
-  international_prefix: 
-  disabled: f
-10:
-  prefix: 335
-  international_prefix: 
-  disabled: f
-11:
-  prefix: 336
-  international_prefix: 
-  disabled: f
-12:
-  prefix: 337
-  international_prefix: 
-  disabled: f
-13:
-  prefix: 338
-  international_prefix: 
-  disabled: f
-14:
-  prefix: 339
-  international_prefix: 
-  disabled: f
-15:
-  prefix: 340
-  international_prefix: 
-  disabled: f
-16:
-  prefix: 342
-  international_prefix: 
-  disabled: f
-17:
-  prefix: 343
-  international_prefix: 
-  disabled: f
-18:
-  prefix: 346
-  international_prefix: 
-  disabled: f
-19:
-  prefix: 347
-  international_prefix: 
-  disabled: f
-20:
-  prefix: 348
-  international_prefix: 
-  disabled: f
-21:
-  prefix: 349
-  international_prefix: 
-  disabled: f
-22:
-  prefix: 360
-  international_prefix: 
-  disabled: f
-23:
-  prefix: 363
-  international_prefix: 
-  disabled: f
-24:
-  prefix: 366
-  international_prefix: 
-  disabled: f
-25:
-  prefix: 368
-  international_prefix: 
-  disabled: f
-26:
-  prefix: 380
-  international_prefix: 
-  disabled: f
-27:
-  prefix: 388
-  international_prefix: 
-  disabled: f
-28:
-  prefix: 389
-  international_prefix: 
-  disabled: f
-29:
-  prefix: 390
-  international_prefix: 
-  disabled: f
-30:
-  prefix: 391
-  international_prefix: 
-  disabled: f
-31:
-  prefix: 392
-  international_prefix: 
-  disabled: f
-32:
-  prefix: 393
-  international_prefix: 
-  disabled: f
-33:
-  prefix: 345
-  international_prefix: 
-  disabled: f
-34:
-  prefix: 377
-  international_prefix: 
-  disabled: f
-35:
+af: 
+  code: af
+  prefix: 93
+  name: Afghanistan
+ 
+al: 
+  code: al
+  prefix: 355
+  name: Albania
+ 
+dz: 
+  code: dz
+  prefix: 213
+  name: Algeria
+ 
+as: 
+  code: as
+  prefix: 1
+  name: AmericanSamoa
+ 
+ad: 
+  code: ad
+  prefix: 376
+  name: Andorra
+ 
+ao: 
+  code: ao
+  prefix: 244
+  name: Angola
+ 
+ai: 
+  code: ai
+  prefix: 1
+  name: Anguilla
+ 
+ag: 
+  code: ag
+  prefix: 1268
+  name: Antigua and Barbuda
+ 
+ar: 
+  code: ar
+  prefix: 54
+  name: Argentina
+ 
+am: 
+  code: am
+  prefix: 374
+  name: Armenia
+ 
+aw: 
+  code: aw
+  prefix: 297
+  name: Aruba
+ 
+au: 
+  code: au
+  prefix: 61
+  name: Australia
+ 
+at: 
+  code: at
+  prefix: 43
+  name: Austria
+ 
+az: 
+  code: az
+  prefix: 994
+  name: Azerbaijan
+ 
+bs: 
+  code: bs
+  prefix: 1
+  name: Bahamas
+ 
+bh: 
+  code: bh
+  prefix: 973
+  name: Bahrain
+ 
+bd: 
+  code: bd
+  prefix: 880
+  name: Bangladesh
+ 
+bb: 
+  code: bb
+  prefix: 1
+  name: Barbados
+ 
+by: 
+  code: by
+  prefix: 375
+  name: Belarus
+ 
+be: 
+  code: be
+  prefix: 32
+  name: Belgium
+ 
+bz: 
+  code: bz
+  prefix: 501
+  name: Belize
+ 
+bj: 
+  code: bj
+  prefix: 229
+  name: Benin
+ 
+bm: 
+  code: bm
+  prefix: 1
+  name: Bermuda
+ 
+bt: 
+  code: bt
+  prefix: 975
+  name: Bhutan
+ 
+ba: 
+  code: ba
+  prefix: 387
+  name: Bosnia and Herzegovina
+ 
+bw: 
+  code: bw
+  prefix: 267
+  name: Botswana
+ 
+br: 
+  code: br
+  prefix: 55
+  name: Brazil
+ 
+io: 
+  code: io
+  prefix: 246
+  name: British Indian Ocean Territory
+ 
+bg: 
+  code: bg
+  prefix: 359
+  name: Bulgaria
+ 
+bf: 
+  code: bf
+  prefix: 226
+  name: Burkina Faso
+ 
+bi: 
+  code: bi
+  prefix: 257
+  name: Burundi
+ 
+kh: 
+  code: kh
+  prefix: 855
+  name: Cambodia
+ 
+cm: 
+  code: cm
+  prefix: 237
+  name: Cameroon
+ 
+ca: 
+  code: ca
+  prefix: 1
+  name: Canada
+ 
+cv: 
+  code: cv
+  prefix: 238
+  name: Cape Verde
+ 
+ky: 
+  code: ky
+  prefix: 0
+  name: Cayman Islands
+ 
+cf: 
+  code: cf
+  prefix: 236
+  name: Central African Republic
+ 
+td: 
+  code: td
+  prefix: 235
+  name: Chad
+ 
+cl: 
+  code: cl
+  prefix: 56
+  name: Chile
+ 
+cn: 
+  code: cn
+  prefix: 86
+  name: China
+ 
+cx: 
+  code: cx
+  prefix: 61
+  name: Christmas Island
+ 
+co: 
+  code: co
+  prefix: 57
+  name: Colombia
+ 
+km: 
+  code: km
+  prefix: 269
+  name: Comoros
+ 
+cg: 
+  code: cg
+  prefix: 242
+  name: Congo
+ 
+ck: 
+  code: ck
+  prefix: 682
+  name: Cook Islands
+ 
+cr: 
+  code: cr
+  prefix: 506
+  name: Costa Rica
+ 
+hr: 
+  code: hr
+  prefix: 385
+  name: Croatia
+ 
+cu: 
+  code: cu
+  prefix: 53
+  name: Cuba
+ 
+cy: 
+  code: cy
+  prefix: 537
+  name: Cyprus
+ 
+cz: 
+  code: cz
+  prefix: 420
+  name: Czech Republic
+ 
+dk: 
+  code: dk
+  prefix: 45
+  name: Denmark
+ 
+dj: 
+  code: dj
+  prefix: 253
+  name: Djibouti
+ 
+dm: 
+  code: dm
+  prefix: 1
+  name: Dominica
+ 
+do: 
+  code: do
+  prefix: 1
+  name: Dominican Republic
+ 
+ec: 
+  code: ec
+  prefix: 593
+  name: Ecuador
+ 
+eg: 
+  code: eg
+  prefix: 20
+  name: Egypt
+ 
+sv: 
+  code: sv
+  prefix: 503
+  name: El Salvador
+ 
+gq: 
+  code: gq
+  prefix: 240
+  name: Equatorial Guinea
+ 
+er: 
+  code: er
+  prefix: 291
+  name: Eritrea
+ 
+ee: 
+  code: ee
+  prefix: 372
+  name: Estonia
+ 
+et: 
+  code: et
+  prefix: 251
+  name: Ethiopia
+ 
+fo: 
+  code: fo
+  prefix: 298
+  name: Faroe Islands
+ 
+fj: 
+  code: fj
+  prefix: 679
+  name: Fiji
+ 
+fi: 
+  code: fi
+  prefix: 358
+  name: Finland
+ 
+fr: 
+  code: fr
+  prefix: 33
+  name: France
+ 
+gf: 
+  code: gf
+  prefix: 594
+  name: French Guiana
+ 
+pf: 
+  code: pf
+  prefix: 689
+  name: French Polynesia
+ 
+ga: 
+  code: ga
+  prefix: 241
+  name: Gabon
+ 
+gm: 
+  code: gm
+  prefix: 220
+  name: Gambia
+ 
+ge: 
+  code: ge
+  prefix: 995
+  name: Georgia
+ 
+de: 
+  code: de
+  prefix: 49
+  name: Germany
+ 
+gh: 
+  code: gh
+  prefix: 233
+  name: Ghana
+ 
+gi: 
+  code: gi
+  prefix: 350
+  name: Gibraltar
+ 
+gr: 
+  code: gr
+  prefix: 30
+  name: Greece
+ 
+gl: 
+  code: gl
+  prefix: 299
+  name: Greenland
+ 
+gd: 
+  code: gd
+  prefix: 1
+  name: Grenada
+ 
+gp: 
+  code: gp
+  prefix: 590
+  name: Guadeloupe
+ 
+gu: 
+  code: gu
+  prefix: 1
+  name: Guam
+ 
+gt: 
+  code: gt
+  prefix: 502
+  name: Guatemala
+ 
+gn: 
+  code: gn
+  prefix: 224
+  name: Guinea
+ 
+gw: 
+  code: gw
+  prefix: 245
+  name: Guinea-Bissau
+ 
+gy: 
+  code: gy
+  prefix: 595
+  name: Guyana
+ 
+ht: 
+  code: ht
+  prefix: 509
+  name: Haiti
+ 
+hn: 
+  code: hn
+  prefix: 504
+  name: Honduras
+ 
+hu: 
+  code: hu
+  prefix: 36
+  name: Hungary
+ 
+is: 
+  code: is
+  prefix: 354
+  name: Iceland
+ 
+in: 
+  code: in
+  prefix: 91
+  name: India
+ 
+id: 
+  code: id
+  prefix: 62
+  name: Indonesia
+ 
+iq: 
+  code: iq
+  prefix: 964
+  name: Iraq
+ 
+ie: 
+  code: ie
+  prefix: 353
+  name: Ireland
+ 
+il: 
+  code: il
+  prefix: 972
+  name: Israel
+ 
+it: 
+  code: it
+  prefix: 39
+  name: Italy
+ 
+jm: 
+  code: jm
+  prefix: 1
+  name: Jamaica
+ 
+jp: 
+  code: jp
+  prefix: 81
+  name: Japan
+ 
+jo: 
+  code: jo
+  prefix: 962
+  name: Jordan
+ 
+kz: 
+  code: kz
+  prefix: 7
+  name: Kazakhstan
+ 
+ke: 
+  code: ke
+  prefix: 254
+  name: Kenya
+ 
+ki: 
+  code: ki
+  prefix: 686
+  name: Kiribati
+ 
+kw: 
+  code: kw
+  prefix: 965
+  name: Kuwait
+ 
+kg: 
+  code: kg
+  prefix: 996
+  name: Kyrgyzstan
+ 
+lv: 
+  code: lv
+  prefix: 371
+  name: Latvia
+ 
+lb: 
+  code: lb
+  prefix: 961
+  name: Lebanon
+ 
+ls: 
+  code: ls
+  prefix: 266
+  name: Lesotho
+ 
+lr: 
+  code: lr
+  prefix: 231
+  name: Liberia
+ 
+li: 
+  code: li
+  prefix: 423
+  name: Liechtenstein
+ 
+lt: 
+  code: lt
   prefix: 370
-  international_prefix: 
-  disabled: f
-36:
+  name: Lithuania
+ 
+lu: 
+  code: lu
+  prefix: 352
+  name: Luxembourg
+ 
+mg: 
+  code: mg
+  prefix: 261
+  name: Madagascar
+ 
+mw: 
+  code: mw
+  prefix: 265
+  name: Malawi
+ 
+my: 
+  code: my
+  prefix: 60
+  name: Malaysia
+ 
+mv: 
+  code: mv
+  prefix: 960
+  name: Maldives
+ 
+ml: 
+  code: ml
+  prefix: 223
+  name: Mali
+ 
+mt: 
+  code: mt
+  prefix: 356
+  name: Malta
+ 
+mh: 
+  code: mh
+  prefix: 692
+  name: Marshall Islands
+ 
+mq: 
+  code: mq
+  prefix: 596
+  name: Martinique
+ 
+mr: 
+  code: mr
+  prefix: 222
+  name: Mauritania
+ 
+mu: 
+  code: mu
+  prefix: 230
+  name: Mauritius
+ 
+yt: 
+  code: yt
+  prefix: 262
+  name: Mayotte
+ 
+mx: 
+  code: mx
+  prefix: 52
+  name: Mexico
+ 
+mc: 
+  code: mc
+  prefix: 377
+  name: Monaco
+ 
+mn: 
+  code: mn
+  prefix: 976
+  name: Mongolia
+ 
+me: 
+  code: me
+  prefix: 382
+  name: Montenegro
+ 
+ms: 
+  code: ms
+  prefix: 1664
+  name: Montserrat
+ 
+ma: 
+  code: ma
+  prefix: 212
+  name: Morocco
+ 
+mm: 
+  code: mm
+  prefix: 95
+  name: Myanmar
+ 
+na: 
+  code: na
+  prefix: 264
+  name: Namibia
+ 
+nr: 
+  code: nr
+  prefix: 674
+  name: Nauru
+ 
+np: 
+  code: np
+  prefix: 977
+  name: Nepal
+ 
+nl: 
+  code: nl
+  prefix: 31
+  name: Netherlands
+ 
+an: 
+  code: an
+  prefix: 599
+  name: Netherlands Antilles
+ 
+nc: 
+  code: nc
+  prefix: 687
+  name: New Caledonia
+ 
+nz: 
+  code: nz
+  prefix: 64
+  name: New Zealand
+ 
+ni: 
+  code: ni
+  prefix: 505
+  name: Nicaragua
+ 
+ne: 
+  code: ne
+  prefix: 227
+  name: Niger
+ 
+ng: 
+  code: ng
+  prefix: 234
+  name: Nigeria
+ 
+nu: 
+  code: nu
+  prefix: 683
+  name: Niue
+ 
+nf: 
+  code: nf
+  prefix: 672
+  name: Norfolk Island
+ 
+mp: 
+  code: mp
+  prefix: 1
+  name: Northern Mariana Islands
+ 
+"no": 
+  code: "no"
+  prefix: 47
+  name: Norway
+ 
+om: 
+  code: om
+  prefix: 968
+  name: Oman
+ 
+pk: 
+  code: pk
+  prefix: 92
+  name: Pakistan
+ 
+pw: 
+  code: pw
+  prefix: 680
+  name: Palau
+ 
+pa: 
+  code: pa
+  prefix: 507
+  name: Panama
+ 
+pg: 
+  code: pg
+  prefix: 675
+  name: Papua New Guinea
+ 
+py: 
+  code: py
+  prefix: 595
+  name: Paraguay
+ 
+pe: 
+  code: pe
+  prefix: 51
+  name: Peru
+ 
+ph: 
+  code: ph
+  prefix: 63
+  name: Philippines
+ 
+pl: 
+  code: pl
+  prefix: 48
+  name: Poland
+ 
+pt: 
+  code: pt
+  prefix: 351
+  name: Portugal
+ 
+pr: 
+  code: pr
+  prefix: 1
+  name: Puerto Rico
+ 
+qa: 
+  code: qa
+  prefix: 974
+  name: Qatar
+ 
+ro: 
+  code: ro
+  prefix: 40
+  name: Romania
+ 
+rw: 
+  code: rw
+  prefix: 250
+  name: Rwanda
+ 
+ws: 
+  code: ws
+  prefix: 685
+  name: Samoa
+ 
+sm: 
+  code: sm
+  prefix: 378
+  name: San Marino
+ 
+sa: 
+  code: sa
+  prefix: 966
+  name: Saudi Arabia
+ 
+sn: 
+  code: sn
+  prefix: 221
+  name: Senegal
+ 
+rs: 
+  code: rs
+  prefix: 381
+  name: Serbia
+ 
+sc: 
+  code: sc
+  prefix: 248
+  name: Seychelles
+ 
+sl: 
+  code: sl
+  prefix: 232
+  name: Sierra Leone
+ 
+sg: 
+  code: sg
+  prefix: 65
+  name: Singapore
+ 
+sk: 
+  code: sk
+  prefix: 421
+  name: Slovakia
+ 
+si: 
+  code: si
+  prefix: 386
+  name: Slovenia
+ 
+sb: 
+  code: sb
+  prefix: 677
+  name: Solomon Islands
+ 
+za: 
+  code: za
+  prefix: 27
+  name: South Africa
+ 
+gs: 
+  code: gs
+  prefix: 500
+  name: South Georgia and the South Sandwich Islands
+ 
+es: 
+  code: es
+  prefix: 34
+  name: Spain
+ 
+lk: 
+  code: lk
+  prefix: 94
+  name: Sri Lanka
+ 
+sd: 
+  code: sd
+  prefix: 249
+  name: Sudan
+ 
+sr: 
+  code: sr
+  prefix: 597
+  name: Suriname
+ 
+sz: 
+  code: sz
+  prefix: 268
+  name: Swaziland
+ 
+se: 
+  code: se
+  prefix: 46
+  name: Sweden
+ 
+ch: 
+  code: ch
+  prefix: 41
+  name: Switzerland
+ 
+tj: 
+  code: tj
+  prefix: 992
+  name: Tajikistan
+ 
+th: 
+  code: th
+  prefix: 66
+  name: Thailand
+ 
+tg: 
+  code: tg
+  prefix: 228
+  name: Togo
+ 
+tk: 
+  code: tk
+  prefix: 690
+  name: Tokelau
+ 
+to: 
+  code: to
+  prefix: 676
+  name: Tonga
+ 
+tt: 
+  code: tt
+  prefix: 1
+  name: Trinidad and Tobago
+ 
+tn: 
+  code: tn
+  prefix: 216
+  name: Tunisia
+ 
+tr: 
+  code: tr
+  prefix: 90
+  name: Turkey
+ 
+tm: 
+  code: tm
+  prefix: 993
+  name: Turkmenistan
+ 
+tc: 
+  code: tc
+  prefix: 1
+  name: Turks and Caicos Islands
+ 
+tv: 
+  code: tv
+  prefix: 688
+  name: Tuvalu
+ 
+ug: 
+  code: ug
+  prefix: 256
+  name: Uganda
+ 
+ua: 
+  code: ua
+  prefix: 380
+  name: Ukraine
+ 
+ae: 
+  code: ae
+  prefix: 971
+  name: United Arab Emirates
+ 
+gb: 
+  code: gb
+  prefix: 44
+  name: United Kingdom
+ 
+us: 
+  code: us
+  prefix: 1
+  name: United States
+ 
+uy: 
+  code: uy
+  prefix: 598
+  name: Uruguay
+ 
+uz: 
+  code: uz
+  prefix: 998
+  name: Uzbekistan
+ 
+vu: 
+  code: vu
+  prefix: 678
+  name: Vanuatu
+ 
+wf: 
+  code: wf
+  prefix: 681
+  name: Wallis and Futuna
+ 
+ye: 
+  code: ye
+  prefix: 967
+  name: Yemen
+ 
+zm: 
+  code: zm
+  prefix: 260
+  name: Zambia
+ 
+zw: 
+  code: zw
+  prefix: 263
+  name: Zimbabwe
+ 
+ax: 
+  code: ax
+  prefix: 0
+  name: land Islands
+ 
+bo: 
+  code: bo
+  prefix: 591
+  name: Bolivia, Plurinational State of
+ 
+bn: 
+  code: bn
+  prefix: 673
+  name: Brunei Darussalam
+ 
+cc: 
+  code: cc
+  prefix: 61
+  name: Cocos (Keeling) Islands
+ 
+cd: 
+  code: cd
+  prefix: 243
+  name: Congo, The Democratic Republic of the
+ 
+ci: 
+  code: ci
+  prefix: 225
+  name: Cote d'Ivoire
+ 
+fk: 
+  code: fk
+  prefix: 500
+  name: Falkland Islands (Malvinas)
+ 
+gg: 
+  code: gg
+  prefix: 44
+  name: Guernsey
+ 
+va: 
+  code: va
+  prefix: 379
+  name: Holy See (Vatican City State)
+ 
+hk: 
+  code: hk
+  prefix: 852
+  name: Hong Kong
+ 
+ir: 
+  code: ir
+  prefix: 98
+  name: Iran, Islamic Republic of
+ 
+im: 
+  code: im
+  prefix: 44
+  name: Isle of Man
+ 
+je: 
+  code: je
+  prefix: 44
+  name: Jersey
+ 
+kp: 
+  code: kp
+  prefix: 850
+  name: Korea, Democratic People's Republic of
+ 
+kr: 
+  code: kr
+  prefix: 82
+  name: Korea, Republic of
+ 
+la: 
+  code: la
+  prefix: 856
+  name: Lao People's Democratic Republic
+ 
+ly: 
+  code: ly
+  prefix: 218
+  name: Libyan Arab Jamahiriya
+ 
+mo: 
+  code: mo
+  prefix: 853
+  name: Macao
+ 
+mk: 
+  code: mk
+  prefix: 389
+  name: Macedonia, The Former Yugoslav Republic of
+ 
+fm: 
+  code: fm
+  prefix: 691
+  name: Micronesia, Federated States of
+ 
+md: 
+  code: md
   prefix: 373
-  international_prefix:
-  disabled: f
+  name: Moldova, Republic of
+ 
+mz: 
+  code: mz
+  prefix: 258
+  name: Mozambique
+ 
+ps: 
+  code: ps
+  prefix: 970
+  name: Palestinian Territory, Occupied
+ 
+pn: 
+  code: pn
+  prefix: 872
+  name: Pitcairn
+ 
+re: 
+  code: re
+  prefix: 262
+  name: "R\xC3\xA9union"
+ 
+ru: 
+  code: ru
+  prefix: 7
+  name: Russia
+ 
+bl: 
+  code: bl
+  prefix: 590
+  name: "Saint Barth\xC3\xA9lemy"
+ 
+sh: 
+  code: sh
+  prefix: 290
+  name: Saint Helena, Ascension and Tristan Da Cunha
+ 
+kn: 
+  code: kn
+  prefix: 1
+  name: Saint Kitts and Nevis
+ 
+lc: 
+  code: lc
+  prefix: 1
+  name: Saint Lucia
+ 
+mf: 
+  code: mf
+  prefix: 590
+  name: Saint Martin
+ 
+pm: 
+  code: pm
+  prefix: 508
+  name: Saint Pierre and Miquelon
+ 
+vc: 
+  code: vc
+  prefix: 1
+  name: Saint Vincent and the Grenadines
+ 
+st: 
+  code: st
+  prefix: 239
+  name: Sao Tome and Principe
+ 
+so: 
+  code: so
+  prefix: 252
+  name: Somalia
+ 
+sj: 
+  code: sj
+  prefix: 47
+  name: Svalbard and Jan Mayen
+ 
+sy: 
+  code: sy
+  prefix: 963
+  name: Syrian Arab Republic
+ 
+tw: 
+  code: tw
+  prefix: 886
+  name: Taiwan, Province of China
+ 
+tz: 
+  code: tz
+  prefix: 255
+  name: Tanzania, United Republic of
+ 
+tl: 
+  code: tl
+  prefix: 670
+  name: Timor-Leste
+ 
+ve: 
+  code: ve
+  prefix: 58
+  name: Venezuela, Bolivarian Republic of
+ 
+vn: 
+  code: vn
+  prefix: 84
+  name: Viet Nam
+ 
+vg: 
+  code: vg
+  prefix: 1
+  name: Virgin Islands, British
+ 
+vi: 
+  code: vi
+  prefix: 1
+  name: Virgin Islands, U.S.

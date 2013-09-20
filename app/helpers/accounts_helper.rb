@@ -49,4 +49,42 @@ module AccountsHelper
     options = ["select_verification_method"] + account_verification_methods
     options.map{ |method| [ t(method.to_sym), method ] }
   end
+  
+  def mobile_prefixes_select(prefixes)
+    # return a collection of prefixes for an HTML select
+    # Example:
+    # value: 39  label: Italy (+39)
+    prefixes.map{ |prefix| ["#{prefix.name} (+#{prefix.prefix})", prefix.prefix]}
+  end
+  
+  def user_selected_prefix(prefixes)
+    # determine user prefix based on his preferred language
+    # try first to intercept last two letters
+    # (because in the case of en-us we want to select "us")
+    lang_suffix = user_language[-2,2].downcase
+    
+    prefixes.each do |prefix|
+      if prefix.code == lang_suffix
+        return prefix.prefix
+      end
+    end
+    
+    # and if nothing is found try the first two letters instead
+    lang_prefix = user_language[0,2].downcase
+    
+    prefixes.each do |prefix|
+      if prefix.code == lang_prefix
+        return prefix.prefix
+      end
+    end
+    
+    # if nothing check if it's simply "en" and return gb
+    if lang_prefix == 'en'
+      return 44
+    end
+  end
+  
+  def user_language
+    request.env['HTTP_ACCEPT_LANGUAGE'].scan(/^[a-z]{2}/).first rescue nil
+  end
 end

@@ -26,7 +26,7 @@
               <div><%=t :mobile_phone, :scope => [:simple_form, :hints] %></div> 
               <div class="block">
                 <div class="grid_4">
-                  <%= form.input :mobile_prefix, :collection => prefixes, :prompt => t(:select_prefix) %>
+                  <%= form.input :mobile_prefix, :collection => prefixes, :prompt => t(:select_prefix), :selected => @selected_prefix %>
                 </div>
 
                 <div class="grid_5">
@@ -38,7 +38,7 @@
                   <%= form.label :mobile_phone_confirmation %>
                   <div class="block">
                     <div class="grid_4">
-                      <%= form.input :mobile_prefix_confirmation, :collection => prefixes, :prompt => t(:select_prefix) %>
+                      <%= form.input :mobile_prefix_confirmation, :collection => prefixes, :prompt => t(:select_prefix), :selected => @selected_prefix %>
                     </div>
     
                     <div class="grid_5">
@@ -52,7 +52,7 @@
                 <%= form.label :mobile_phone %>
                 <div class="block">
                   <div class="grid_4">
-                    <%= form.input :mobile_prefix, :collection => prefixes, :prompt => t(:select_prefix), :disabled => true %>
+                    <%= form.input :mobile_prefix, :collection => prefixes, :prompt => t(:select_prefix), :selected => @selected_prefix, :disabled => true %>
                   </div>
 
                   <div class="grid_5">
@@ -67,7 +67,7 @@
         <%= form.label :mobile_phone %>
         <div class="block">
           <div class="grid_4">
-            <%= form.input :mobile_prefix, :collection => prefixes, :prompt => t(:select_prefix), :disabled => true %>
+            <%= form.input :mobile_prefix, :collection => prefixes, :prompt => t(:select_prefix), :selected => @selected_prefix, :disabled => true %>
           </div>
 
           <div class="grid_5">

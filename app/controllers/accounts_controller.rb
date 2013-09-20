@@ -35,11 +35,14 @@ class AccountsController < ApplicationController
   protect_from_forgery :except => [ :verify_paypal, :secure_verify_paypal ]
 
   STATS_PERIOD = 14
+  
+  include AccountsHelper
 
   def new
     @account = Account.new( :verification_method => Account::VERIFY_BY_MOBILE, :state => 'Italy' )
     @countries = Country.all
     @mobile_prefixes = MobilePrefix.all
+    @selected_prefix = user_selected_prefix(@mobile_prefixes)
 
     respond_to do |format|
       format.html
