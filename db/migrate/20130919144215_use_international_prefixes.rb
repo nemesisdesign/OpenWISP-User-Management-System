@@ -6,7 +6,7 @@ class UseInternationalPrefixes < ActiveRecord::Migration
   end
   
   def self.down
-    add_column :mobile_prefixes, :international_prefix, :number
+    add_column :mobile_prefixes, :international_prefix, :integer
     remove_column :mobile_prefixes, :name
     remove_column :mobile_prefixes, :code
   end
