@@ -76,7 +76,7 @@ class AccountsController < ApplicationController
       end
     else
       # select verification method automatically
-      @verification_method = params[:account][:verification_method]
+      @verification_method = params[:account][:verification_method] rescue nil
       
       respond_to do |format|
         format.html   { render :action => :new }

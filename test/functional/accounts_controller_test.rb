@@ -4,6 +4,54 @@ class AccountsControllerTest < ActionController::TestCase
   
   setup :activate_authlogic
   
+  test "create_new" do
+    # disable captcha
+    Configuration.set('captcha_enabled', 'false')
+    
+    CONFIG['birth_date'] = false
+    CONFIG['address'] = false
+    CONFIG['zip'] = false
+    CONFIG['city'] = false
+    
+    user_count = User.count
+    
+    account_data = {
+      :mobile_prefix => '39',
+      :mobile_suffix => '3664253801',
+      :mobile_prefix_confirmation => '39',
+      :mobile_suffix_confirmation => '3664253801',
+      :given_name => 'Pinco',
+      :surname => 'Pallo',
+      :username => '393664253801',
+      :email => 'pincopallo@test.com',
+      :email_confirmation => 'pincopallo@test.com',
+      :password => 'federico3',
+      :password_confirmation => 'federico3',
+      :privacy_acceptance => true,
+      :eula_acceptance => true,
+      :state => 'Italy',
+      :city => '',
+      :zip => '',
+      :address => '',
+      :birth_date => ''
+    }
+    post :create, { :account => account_data }
+    
+    # ensure user is created
+    assert_equal user_count+1, User.count
+    # ensure user is redirected to account path
+    assert_redirected_to account_path
+    
+    # ensure parameters are saved correctly
+    user = User.last
+    assert_equal '39', user.mobile_prefix
+    assert_equal '3664253801', user.mobile_suffix
+    assert_equal '393664253801', user.mobile_phone
+    assert_equal 'pincopallo@test.com', user.email
+    assert_equal 'Pinco', user.given_name
+    assert_equal 'Pallo', user.surname
+  end
+  
   test "index accessible" do
     get :instructions
     assert_response :success

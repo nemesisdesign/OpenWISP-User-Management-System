@@ -58,7 +58,8 @@ class MobilePhoneSipBusyMachine < SipBusyMachine
   def callback(params)
     super(params)
     if params[:from] =~ /\A[0-9]+\Z/ and params[:to] =~ /\A[0-9]+\Z/
-      if user = User.find_by_mobile_phone(params[:from])
+      user = User.find_by_mobile_phone(params[:from]) || User.find_by_mobile_suffix(params[:from])
+      if user
         if user.verify_with_mobile_phone?
           unless user.mobile_phone_identity_verify_or_password_recover!
             @logger.warn("Account with mobile #{params[:from]} already verified/recovered")

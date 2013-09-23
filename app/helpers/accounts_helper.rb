@@ -61,7 +61,13 @@ module AccountsHelper
     # determine user prefix based on his preferred language
     # try first to intercept last two letters
     # (because in the case of en-us we want to select "us")
-    lang_suffix = user_language[-2,2].downcase
+    begin
+      lang_suffix = user_language[-2,2].downcase
+    rescue NoMethodError
+      # no preferred language set, return empty string
+      # user will have to manually select prefix
+      return ''
+    end
     
     prefixes.each do |prefix|
       if prefix.code == lang_suffix
@@ -82,6 +88,8 @@ module AccountsHelper
     if lang_prefix == 'en'
       return 44
     end
+    
+    return ''
   end
   
   def user_language
