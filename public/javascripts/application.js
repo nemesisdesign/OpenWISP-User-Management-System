@@ -156,7 +156,7 @@ var owums = {
                 credit_card_elements.hide();
                 registration_form.fadeOut(250);
             }
-            owums.toggleReadonlyUsername();
+            //owums.toggleReadonlyUsername();
         });
         // trigger once on page load
         verification_method.trigger('change');
@@ -209,6 +209,16 @@ var owums = {
             email_confirmation = email_confirmation.parent();
             password_confirmation = password_confirmation.parent();
         }
+        
+        // select confirmation prefix if main prefix is changed and vice versa
+        $('#account_mobile_prefix, #account_mobile_prefix_confirmation').change(function(e){
+            $(this).find('option[selected]').removeAttr('selected');
+            var text = $('.verification-block.mobile-phone select option[value='+$(this).val()+']')
+                       .attr('selected', 'selected').eq(0).text();
+            $('.verification-block.mobile-phone select').val($(this).val());
+            // update mobile ui too
+            $('.verification-block.mobile-phone .ui-btn-text').text(text);
+        });
         
         if(!is_error){
             mobile_confirmation.hide();

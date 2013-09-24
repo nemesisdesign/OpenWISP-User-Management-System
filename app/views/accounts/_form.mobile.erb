@@ -36,7 +36,7 @@
       <% end %>
   <% end %>
 
-  <%= render 'common/form_elements/mobile_phone', :form => f, :owner => account, :prefixes => mobile_prefixes %>
+  <%= render 'common/form_elements/mobile_phone', :form => f, :owner => account, :prefixes => mobile_prefixes_select(mobile_prefixes) %>
 
   <%= render 'common/form_elements/identity_document', :form => f, :owner => account %>
 

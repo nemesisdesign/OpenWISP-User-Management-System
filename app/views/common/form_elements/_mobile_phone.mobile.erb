@@ -27,7 +27,7 @@
           <%=t :mobile_phone, :scope => [:simple_form, :hints] %>
           <p>&nbsp;</p>
 
-          <%= form.input :mobile_prefix, :collection => prefixes, :label => t(:Prefix), :prompt => t(:Choose) %>
+          <%= form.input :mobile_prefix, :collection => prefixes, :label => t(:Prefix), :prompt => t(:Choose), :selected => @selected_prefix %>
           <%= form.input :mobile_suffix, :label => t(:Suffix) %>
         </li>
 
@@ -35,7 +35,7 @@
           <%= form.label :mobile_phone_confirmation %>
           <p>&nbsp;</p>
 
-          <%= form.input :mobile_prefix_confirmation, :collection => prefixes, :label => t(:Prefix_confirmation), :prompt => t(:Choose) %>
+          <%= form.input :mobile_prefix_confirmation, :collection => prefixes, :label => t(:Prefix_confirmation), :prompt => t(:Choose), :selected => @selected_prefix %>
           <%= form.input :mobile_suffix_confirmation, :label => t(:Suffix_confirmation) %>
         </li>
     <% else %>

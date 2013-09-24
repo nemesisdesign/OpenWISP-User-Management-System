@@ -504,3 +504,5 @@ ul.nomargin,.button.nomargin{ margin-bottom: 0 !important }
 .ui-buttonset label{ width: auto !important; min-width: 60px }
 
 #verified-radio, #enabled-radio{ float: left; margin-right: 20px }
+
+#account_mobile_prefix, #account_mobile_prefix_confirmation{ text-align: left; padding-left: 15px }
