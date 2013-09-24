@@ -57,12 +57,24 @@ module AccountsHelper
     prefixes.map{ |prefix| ["#{prefix.name} (+#{prefix.prefix})", prefix.prefix]}
   end
   
-  def user_selected_prefix(prefixes)
+  def user_selected_prefix(prefixes, lang=nil)
+    lang = lang.nil? ? user_language.downcase : lang
+    
+    # if nothing check if it's simply "en" and return gb
+    if lang == 'en'
+      return 44
+    elsif lang == 'ca'  # catalunya has spanish prefix
+      # wont process 'en-ca' which is canadian english
+      return 34
+    elsif lang == 'eu'  # baseque has spanish prefix
+      return 34
+    end
+    
     # determine user prefix based on his preferred language
     # try first to intercept last two letters
     # (because in the case of en-us we want to select "us")
     begin
-      lang_suffix = user_language[-2,2].downcase
+      lang_suffix = lang[-2,2]
     rescue NoMethodError
       # no preferred language set, return empty string
       # user will have to manually select prefix
@@ -76,7 +88,7 @@ module AccountsHelper
     end
     
     # and if nothing is found try the first two letters instead
-    lang_prefix = user_language[0,2].downcase
+    lang_prefix = lang[0,2]
     
     prefixes.each do |prefix|
       if prefix.code == lang_prefix
@@ -84,15 +96,10 @@ module AccountsHelper
       end
     end
     
-    # if nothing check if it's simply "en" and return gb
-    if lang_prefix == 'en'
-      return 44
-    end
-    
     return ''
   end
   
   def user_language
-    request.env['HTTP_ACCEPT_LANGUAGE'].scan(/^[a-z]{2}/).first rescue nil
+    request.env['HTTP_ACCEPT_LANGUAGE'].scan(/^[a-z]{2}/).first rescue ''
   end
 end
